@@ -22,6 +22,6 @@ The BR-M5 has been primarily developed for the Canon M50 Mark I, which misses a 
 
 - [x] Fix connection reliability issues.
 - [x] Auto connection to camera when remote start-up.
-- [ ] Add battery level indication.
+- [x] Add battery level indication.
 
 Feel free to contribute!
