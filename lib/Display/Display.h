@@ -13,6 +13,7 @@ private:
     String name;
     String address;
     bool negatif = true; //White text on black bg if true
+    float battery_lvl = 50;
 
     const GFXfont* font_name = &Yellowtail_32;
     const GFXfont* font_titles = &FreeSerif24pt7b;
@@ -23,6 +24,7 @@ public :
     void set_address(String ext_address);
     void set_init_screen(bool do_pair);
     void set_main_menu_screen(int delay, String status);
+    float battery_level();
 };
 
 #endif
