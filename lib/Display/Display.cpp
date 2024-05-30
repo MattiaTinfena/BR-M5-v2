@@ -1,9 +1,9 @@
 #include "Display.h"
 #include <Arduino.h>
-#include "M5StickCPlus.h"
-#include "icon.c"
+#include "M5StickCPlus2.h"
 
-Display::Display(M5Display* tft, String name_remote):
+
+Display::Display(M5GFX* tft, String name_remote):
     buffer(tft),
     name(name_remote)
 {
