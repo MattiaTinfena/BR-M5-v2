@@ -1,7 +1,7 @@
 #include "CanonBLERemote.h"
 #include <Arduino.h>
 #include "Ticker.h"
-#include "M5StickCPlus.h"
+#include "M5StickCPlus2.h"
 #include "Display.h"
 #include "TimeLapse_Management.h"
 
@@ -24,7 +24,7 @@ void setup()
 
     M5.begin();
     bool do_pair = M5.BtnA.isPressed();
-    M5.Axp.ScreenBreath(9);
+    //M5.Axp.ScreenBreath(9);
     M5.Lcd.setRotation(1);
     M5_display.set_init_screen(do_pair);
     
