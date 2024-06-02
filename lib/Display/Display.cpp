@@ -71,15 +71,10 @@ float Display::battery_level(void){
         v = 4.2;
     }
     float level = ((v-3.27)/(4.2-3.27))*100;
-    if(level > 97.5){
-        return 100;
-    }
-    else{
-        float bl = 0.7*battery_lvl+0.3*level;
+    float bl = 0.7*battery_lvl+0.3*level;
 
-        if ((bl > (battery_lvl + 0.5)) || (bl < (battery_lvl - 0.5))) {
-            battery_lvl = bl;
-        }
-        return roundf(battery_lvl);
+    if ((bl > (battery_lvl + 0.5)) || (bl < (battery_lvl - 0.5))) {
+        battery_lvl = bl;
     }
+    return roundf(battery_lvl);
 }
