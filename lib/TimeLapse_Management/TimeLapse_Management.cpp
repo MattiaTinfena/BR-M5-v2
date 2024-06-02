@@ -1,6 +1,8 @@
 #include "TimeLapse_Management.h"
+#include "TimeManagement.h"
 
-TimeLapse::TimeLapse(long inter_min)
+TimeLapse::TimeLapse(Timer* tmr, long inter_min):
+    rtc(tmr)
 {
     timeLapse_ON = false;
     _MIN_Interval = inter_min;
@@ -8,9 +10,9 @@ TimeLapse::TimeLapse(long inter_min)
 
 bool TimeLapse::TimeLapse_Trigger()
 {
-    if (timeLapse_ON and ((millis() - _time_last_trigger) > Interval)){
+    if (timeLapse_ON and (rtc->seconds*1000 > Interval)){
         Pic_count += 1;
-        _time_last_trigger = millis();
+        rtc->tmr_reset();
         return true;
     }
     else{

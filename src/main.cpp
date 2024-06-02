@@ -4,6 +4,7 @@
 #include "M5StickCPlus2.h"
 #include "Display.h"
 #include "TimeLapse_Management.h"
+#include "TimeManagement.h"
 
 #define LOG_LOCAL_LEVEL ESP_LOG_INFO
 #include "esp_log.h"
@@ -13,8 +14,8 @@ String name_remote = "BR-M5";
 CanonBLERemote canon_ble(name_remote);
 Display M5_display(&M5.Lcd, name_remote);
 String prev_status;
-TimeLapse timelapse(400);
-
+Timer rtc;
+TimeLapse timelapse(&rtc,0);
 enum RemoteMode {Settings, Shooting}current_mode;
 
 
@@ -25,7 +26,6 @@ void setup()
 
     M5.begin();
     bool do_pair = M5.BtnA.isPressed();
-    //M5.Axp.ScreenBreath(9);
     M5.Lcd.setRotation(1);
     M5_display.set_init_screen(do_pair);
     
@@ -52,6 +52,7 @@ void setup()
     M5_display.set_address(canon_ble.getPairedAddressString());
     prev_status = "Ready for single shot";
     M5_display.set_main_menu_screen(timelapse.get_interval(), "Ready for single shot", timelapse.Pic_count);
+    rtc.tmr_init();
 }
 
 
@@ -92,6 +93,7 @@ void update_shooting()
             {
                 Serial.println("Stop timelapse");
                 prev_status = "Ready for timelapse";
+                timelapse.Pic_count = 0;
                 M5_display.set_main_menu_screen(timelapse.get_interval(), "Ready for timelapse", timelapse.Pic_count);
             }
         }
@@ -118,6 +120,7 @@ void loop()
 {
     // Update buttons state
     M5.update();
+    rtc.tmr_update();
     M5_display.set_main_menu_screen(timelapse.get_interval(), prev_status, timelapse.Pic_count);
     switch (current_mode)
     {
