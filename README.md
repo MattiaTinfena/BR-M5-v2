@@ -14,9 +14,8 @@ The BR-M5 has been primarily developed for the Canon M50 Mark I, which misses a 
 * Clone this repository - ```git clone https://github.com/MattiaTinfena/BR-M5-v2``` -, open it as project in PlatformIO and upload - ```Ctrl+Alt+u``` - to a M5Stick-Cplus2 connected to your PC.
 
 ## How-To-Use
-<p align="center">
-   <src="![M5StickCPlus2](https://github.com/MattiaTinfena/BR-M5-v2/assets/101633758/f5ef207a-4a7d-424d-9c77-bb4c58053798)">
-</p>
+ ![M5StickCPlus2](https://github.com/MattiaTinfena/BR-M5-v2/assets/101633758/f5ef207a-4a7d-424d-9c77-bb4c58053798)
+ 
 * Power on by pressing the C button and power off with a 6 seconds press on the same button.
 * To pair a new camera press A button while M5StickPlus2 is starting up
 * You can connect to your Canon DSLR as soon as the remote is powered on and displays *Pairing in progress*.
