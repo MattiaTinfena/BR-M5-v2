@@ -1,6 +1,6 @@
 [![BR-M5 | Open-Source Bluetooth Remote for Canon DSLRs](./.github/cover.png)](https://youtu.be/Gh5uEc2dNJM "BR-M5 | Open-Source Bluetooth Remote for Canon DSLRs")
 
-# From an https://github.com/ArthurFDLR idea
+# From an [Arthur FINDELAIR](https://github.com/ArthurFDLR) idea
 
 # BR-M5: An open-source Bluetooth Remote for Canon DSLRs
 
