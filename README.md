@@ -15,7 +15,7 @@ The BR-M5 has been primarily developed for the Canon M50 Mark I, which misses a 
 
 ## How-To-Use
 <p align="center">
-![M5StickCPlus2](https://github.com/MattiaTinfena/BR-M5-v2/assets/101633758/f5ef207a-4a7d-424d-9c77-bb4c58053798)
+   <src="![M5StickCPlus2](https://github.com/MattiaTinfena/BR-M5-v2/assets/101633758/f5ef207a-4a7d-424d-9c77-bb4c58053798)">
 </p>
 * Power on by pressing the C button and power off with a 6 seconds press on the same button.
 * To pair a new camera press A button while M5StickPlus2 is starting up
