@@ -26,7 +26,7 @@ The BR-M5 has been primarily developed for the Canon M50 Mark I, which misses a 
 
 ## To-do
 
-- [x] Optimize and clean the code
-- [x] Remove warnings.
+- [] Optimize and clean the code
+- [] Remove warnings.
 
 Feel free to contribute!
