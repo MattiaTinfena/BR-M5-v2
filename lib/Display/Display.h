@@ -3,6 +3,7 @@
 
 #include "M5StickCPlus2.h"
 #include <Arduino.h>
+#include "cplus_RTC.h"
 
 extern const unsigned char icon_ble[4608];
 
@@ -23,7 +24,7 @@ public :
     Display(M5GFX* tft, String name_remote);
     void set_address(String ext_address);
     void set_init_screen(bool do_pair);
-    void set_main_menu_screen(int delay, String status, unsigned int pic_count);
+    void set_main_menu_screen(unsigned int delay, String status, unsigned int pic_count, unsigned long time, int mode);
     float battery_level();
 };
 

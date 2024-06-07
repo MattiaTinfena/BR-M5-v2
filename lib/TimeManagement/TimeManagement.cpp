@@ -7,6 +7,10 @@ void Timer::tmr_init(){
     rtc.disableIRQ();
     rtc.SetTime(&reset_time);
     initial_millis = millis();
+    actual_time = {0,0,0};
+    initial_time = {0,0,0};
+    seconds = 0;
+    millisec = 0;
 }
 void Timer::tmr_reset(){
     rtc.SetTime(&reset_time);
